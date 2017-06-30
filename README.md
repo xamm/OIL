@@ -1,6 +1,6 @@
-# filepath README
+# Show File in File Explorer Extension
 
-This is the README for your extension "filepath". After writing up a brief description, we recommend including the following sections.
+This extension is used to open the current place of the opened file in file explorer.
 
 ## Features
 
