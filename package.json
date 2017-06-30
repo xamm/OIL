@@ -1,0 +1,32 @@
+{
+	"name": "filepath",
+	"displayName": "FilePath",
+	"description": "Shows the filepath of the current file in the editor and enables the user to click on the path to open the explorer in this location.",
+	"version": "0.0.1",
+	"publisher": "xamm",
+	"engines": {
+		"vscode": "^1.10.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"main": "./out/src/extension",
+	"activationEvents": [
+		"*"
+	],
+	"scripts": {
+		"vscode:prepublish": "tsc -p ./",
+		"compile": "tsc -watch -p ./",
+		"postinstall": "node ./node_modules/vscode/bin/install",
+		"test": "node ./node_modules/vscode/bin/test"
+	},
+	"devDependencies": {
+		"@types/mocha": "^2.2.32",
+		"mocha": "^2.3.3",
+		"tslint": "^5.1.0",
+		"typescript": "^2.0.3",
+		"tslint-microsoft-contrib": "^4.0.0",
+		"typings": "^1.3.2",
+		"vscode": "^1.0.0"
+	}
+}
