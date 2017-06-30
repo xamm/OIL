@@ -2,7 +2,7 @@
     "name": "filepath",
     "displayName": "FilePath",
     "description": "Shows the filepath of the current file in the editor and enables the user to click on the path to open the explorer in this location.",
-    "version": "0.2.0",
+    "version": "0.0.2",
     "publisher": "xamm",
     "engines": {
         "vscode": "^1.10.0"
