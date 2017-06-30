@@ -8,11 +8,11 @@ Open current opened file in file explorer.
 
 With the extension the filepath will be displayed on the statusbar.
 
-![alt text](./Images/PathWithIcon.png "Displays current path of the opened file.")
+![alt text](https://github.com/xamm/ShowFileExtension/raw/master/Images/PathWithIcon.png "Displays current path of the opened file.")
 
 When you clock on this path the folder containing the displayed file will be opened.
 
-![alt text](./Images/OpenedFolder.png "The opened folder containing the file.")
+![alt text](https://github.com/xamm/ShowFileExtension/raw/master/Images/OpenedFolder.png "The opened folder containing the file.")
 
 ## Requirements
 
