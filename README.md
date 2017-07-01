@@ -16,4 +16,4 @@ When you click on this path the folder containing the displayed file will be ope
 
 ## Requirements
 
-Currently only works on Mac.
+Currently only works on Mac and Linux.
