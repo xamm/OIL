@@ -15,21 +15,14 @@ export class FileExplorerHandler {
 		}
 	}
 
-	private static createPath(uri: string): string {
-		const parts = Utilities.splitKeepDelimeter(uri, '/');
-		const argument = Utilities.combineToPathWithoutFileName(parts);
-		return argument;
-	}
-
 	private static openLinux(uri: string): void {
-		const argument = this.createPath(uri);
+		const argument = Utilities.createPathWithoutFilename(uri);
 		const command = 'xdg-open  ' + argument + '/';
 		child_process.exec(command);
 	}
 
 	private static openMac(uri: string): void {
-		const argument = this.createPath(uri);
-
+		const argument = Utilities.createPathWithoutFilename(uri);
 		const command = 'open ' + argument + '/';
 		child_process.exec(command);
 	}
