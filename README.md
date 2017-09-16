@@ -1,5 +1,9 @@
 # Show File in File Explorer Extension
 
+## Build Status
+
+[![Build Status](https://travis-ci.org/xamm/ShowFileExtension.svg?branch=master)](https://travis-ci.org/xamm/ShowFileExtension)
+
 This extension is used to open the current place of the opened file in the file explorer.
 
 ## Settings
