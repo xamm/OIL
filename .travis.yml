@@ -1,11 +1,16 @@
-sudo: false
 language: node_js
 node_js:
-  - "6.6"
+  - 'stable'
+
+sudo: false
 
 os:
   - osx
   - linux
+
+branches:
+  only:
+  - master
 
 before_install:
   - if [ $TRAVIS_OS_NAME == "linux" ]; then
@@ -15,8 +20,17 @@ before_install:
     fi
 
 install:
+  - npm uninstall typescript --no-save
+  - npm uninstall tslint --no-save
   - npm install
   - npm run vscode:prepublish
 
+cache:
+  directories:
+    - node_modules
+
 script:
   - npm test --silent
+
+  git:
+    depth: 1
