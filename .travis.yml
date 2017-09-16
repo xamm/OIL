@@ -24,12 +24,12 @@ install:
   - npm install
   - npm run vscode:prepublish
 
+script:
+  - npm test --silent
+  
 cache:
   directories:
     - node_modules
-
-script:
-  - npm test --silent
 
   git:
     depth: 1
