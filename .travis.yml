@@ -19,13 +19,13 @@ before_install:
     fi
 
 install:
-  - npm uninstall typescript --no-save
-  - npm uninstall tslint --no-save
+  - yarn remove typescript --no-lockfile
+  - yarn remove tslint --no-lockfile
   - yarn
-  - npm run vscode:prepublish
+  - yarn run vscode:prepublish
 
 script:
-  - npm test --silent
+  - yarn test --silent
 
 cache:
   yarn: true
