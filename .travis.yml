@@ -7,10 +7,6 @@ os:
   - osx
   - linux
 
-branches:
-  only:
-  - master
-
 before_install:
   - if [ $TRAVIS_OS_NAME == "linux" ]; then
       export CXX="g++-4.9" CC="gcc-4.9" DISPLAY=:99.0;
@@ -24,9 +20,3 @@ install:
 
 script:
   - yarn test --silent
-
-cache:
-  yarn: true
-
-  git:
-    depth: 1
