@@ -1,8 +1,16 @@
 sudo: false
+language: node_js
+node_js:
+  - 'stable'
 
 os:
   - osx
   - linux
+  - windows
+
+branches:
+  only:
+  - master
 
 before_install:
   - if [ $TRAVIS_OS_NAME == "linux" ]; then
@@ -12,8 +20,16 @@ before_install:
     fi
 
 install:
-  - npm install
-  - npm run vscode:prepublish
+  - yarn remove typescript --no-lockfile
+  - yarn remove tslint --no-lockfile
+  - yarn
+  - yarn run vscode:prepublish
 
 script:
-  - npm test --silent
+  - yarn test --silent
+
+cache:
+  yarn: true
+
+  git:
+    depth: 1
