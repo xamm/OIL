@@ -2,7 +2,11 @@
     "name": "filepath",
     "displayName": "ShowFile",
     "description": "Shows the filepath of the current file in the editor and enables the user to click on the path to open the explorer in this location.",
-    "version": "0.7.0",
+	"version": "0.7.0",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/xamm/ShowFileExtension.git"
+	  },
     "publisher": "xamm",
     "engines": {
         "vscode": "^1.10.0"
