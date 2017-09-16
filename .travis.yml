@@ -21,13 +21,14 @@ before_install:
 install:
   - npm uninstall typescript --no-save
   - npm uninstall tslint --no-save
-  - npm install
+  - yarn
   - npm run vscode:prepublish
 
 script:
   - npm test --silent
-  
+
 cache:
+  yarn: true
   directories:
     - node_modules
 
