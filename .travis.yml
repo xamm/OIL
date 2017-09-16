@@ -19,8 +19,6 @@ before_install:
     fi
 
 install:
-  - yarn remove typescript --no-lockfile
-  - yarn remove tslint --no-lockfile
   - yarn
   - yarn run vscode:prepublish
 
