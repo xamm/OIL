@@ -9,15 +9,15 @@ os:
   - linux
 
 env:
-  - NODE_VERSION="6.9.5"
+  - NODE_VERSION="9.11.1"
 
 before_install:
   # nvm is not yet supported on osx, manually install
   - if [ $TRAVIS_OS_NAME == "osx" ]; then git clone https://github.com/creationix/nvm.git /tmp/.nvm; source /tmp/.nvm/nvm.sh; nvm install $NODE_VERSION; nvm use --delete-prefix $NODE_VERSION; fi
 
 install:
-  - yarn
-  - yarn run vscode:prepublish
+  - npm install
+  - npm run vscode:prepublish
 
 script:
-  - yarn test
+  - npm test
