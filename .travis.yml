@@ -1,8 +1,8 @@
 sudo: false
+
 node_js:
-  - "5"
+  - "7"
 os:
-  - osx
   - linux
 
 before_install:
