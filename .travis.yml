@@ -20,6 +20,9 @@ install:
   - yarn run vscode:prepublish
 
 script:
+  - travis_wait 30 yarn test --silent
+
+ install:
   - yarn test --silent
 
 cache:
