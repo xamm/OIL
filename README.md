@@ -7,6 +7,27 @@ This extension is used to open the current place of the opened file in the file 
 [![Build Status](https://travis-ci.org/xamm/ShowFileExtension.svg?branch=master)](https://travis-ci.org/xamm/ShowFileExtension)
 [![Licence](https://img.shields.io/github/license/xamm/ShowFileExtension.svg)](https://github.com/xamm/ShowFileExtension)
 
+## Build it yourself
+
+### Needed tools
+
+[nodejs](https://nodejs.org/en/download/)
+
+[Yarn](https://yarnpkg.com/en/docs/install) or NPM(comes with nodejs)
+
+[TypeScript](https://www.typescriptlang.org/#download-links)
+
+### Build it
+
+Clone the repository: ```git clone https://github.com/x-amm/OIL.git```
+Open the repository in a terminal window.
+
+Run ```yarn``` or ```npm install``` from the project folder in a terminal.
+Run ```tsc``` also from a terminal inside the project folder.
+
+Output directory is __out/__.
+You can now run this sourcecode with e.g. VisualStudio Code.
+
 ## Settings
 
     "showFileExtension.copyPathToClipBoard": false,
