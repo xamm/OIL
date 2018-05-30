@@ -22,9 +22,6 @@ install:
 script:
   - travis_wait 30 yarn test --silent
 
- install:
-  - yarn test --silent
-
 cache:
   yarn: true
   directories:
