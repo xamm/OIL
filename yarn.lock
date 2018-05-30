@@ -273,9 +273,9 @@ convert-source-map@^1.1.1:
   version "1.5.1"
   resolved "https://registry.yarnpkg.com/convert-source-map/-/convert-source-map-1.5.1.tgz#b8278097b9bc229365de5c62cf5fcaed8b5599e5"
 
-copy-paste@^1.3.0:
-  version "1.3.0"
-  resolved "https://registry.yarnpkg.com/copy-paste/-/copy-paste-1.3.0.tgz#a7e6c4a1c28fdedf2b081e72b97df2ef95f471ed"
+copy-paste@1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/copy-paste/-/copy-paste-1.2.0.tgz#d721cd55d57d91ef9176efedf3233465f34c0693"
   dependencies:
     iconv-lite "^0.4.8"
   optionalDependencies:
