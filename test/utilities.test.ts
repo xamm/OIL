@@ -1,5 +1,4 @@
 import * as assert from 'assert';
-import * as vscode from 'vscode';
 import { Utilities } from '../src/utilities';
 
 suite('Utilities Test', () => {

@@ -10,7 +10,7 @@ export function activate(context: vscode.ExtensionContext) {
 
 	const disposable = vscode.commands.registerCommand('extension.openFolder', () => {
 		const uri = vscode.Uri.parse(filePath.path);
-		UserInteraction.manageUserInteraction(filePath.path);
+		UserInteraction.manageUserInteraction(uri.toString());
 	});
 
 	context.subscriptions.push(disposable);

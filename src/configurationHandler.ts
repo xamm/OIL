@@ -7,7 +7,7 @@ export class ConfigurationHandler {
 		if (!setting) {
 			return false;
 		}
-		const settingValue: boolean = setting.get(settingName);
+		const settingValue: boolean | undefined = setting.get(settingName);
 		if (!settingValue) {
 			return false;
 		}

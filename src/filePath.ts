@@ -2,18 +2,14 @@ import { StatusBarItem, window, StatusBarAlignment, TextDocument } from 'vscode'
 
 export class FilePath {
 
-	private statusBarItem: StatusBarItem;
-	public path: string;
+	private statusBarItem: StatusBarItem | null = null;
+	public path: string = '';
 
 	public updateFilePath() {
 
-		if (!this.statusBarItem) {
-			this.statusBarItem = window.createStatusBarItem(StatusBarAlignment.Left);
-		}
-
 		const editor = window.activeTextEditor;
 		if (!editor) {
-			this.statusBarItem.hide();
+			this.getStatusBarItemInstance().hide();
 			return;
 		}
 
@@ -21,13 +17,13 @@ export class FilePath {
 		this.path = this.getFilePath(doc);
 
 		this.fillStatusBarItem(this.path);
-		this.statusBarItem.show();
+		this.getStatusBarItemInstance().show();
 
 	}
 
 	private fillStatusBarItem(filePath: string): void {
-		this.statusBarItem.text = filePath ? `$(link-external) ` + filePath : '';
-		this.statusBarItem.command = 'extension.openFolder';
+		this.getStatusBarItemInstance().text = filePath ? `$(link-external) ` + filePath : '';
+		this.getStatusBarItemInstance().command = 'extension.openFolder';
 	}
 
 	public getFilePath(doc: TextDocument): string {
@@ -37,6 +33,13 @@ export class FilePath {
 	}
 
 	public dispose() {
-		this.statusBarItem.dispose();
+		this.getStatusBarItemInstance().dispose();
+	}
+
+	private getStatusBarItemInstance(): StatusBarItem {
+		if (!this.statusBarItem) {
+			this.statusBarItem = window.createStatusBarItem(StatusBarAlignment.Left);
+		}
+		return this.statusBarItem;
 	}
 }

@@ -13,7 +13,7 @@ export class Utilities {
 	public static splitKeepDelimeter(text: string, delimeter: string) {
 		let parts = text.split(delimeter);
 
-		parts = parts.map((item, index) => {
+		parts = parts.map((item) => {
 			return item ? delimeter.concat(item) : '';
 		});
 		return parts;
