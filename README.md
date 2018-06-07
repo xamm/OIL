@@ -49,11 +49,11 @@ With the extension the filepath will be displayed on the statusbar.
 
 ### Open Explorer
 
-![alt text](https://github.com/xamm/ShowFileExtension/raw/master/Images/PathWithIcon.png "Displays current path of the opened file.")
+![alt text](https://github.com/xamm/OIL/raw/master/Images/PathWithIcon.png "Displays current path of the opened file.")
 
 When you click on this path the folder containing the displayed file will be opened.
 
-![alt text](https://github.com/xamm/ShowFileExtension/raw/master/Images/OpenedFolder.png "The folder containing the file.")
+![alt text](https://github.com/xamm/OIL/raw/master/Images/OpenedFolder.png "The folder containing the file.")
 
 ### Copy to clipboard
 
