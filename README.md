@@ -5,7 +5,7 @@ This extension is used to open the current place of the opened file in the file 
 ## Build Status and License
 
 [![Build Status](https://travis-ci.org/xamm/ShowFileExtension.svg?branch=master)](https://travis-ci.org/xamm/ShowFileExtension)
-[![Licence](https://img.shields.io/github/license/xamm/ShowFileExtension.svg)](https://github.com/xamm/ShowFileExtension)
+[![Licence](https://img.shields.io/github/license/xamm/OIL.svg)](https://github.com/xamm/OIL)
 
 ## Build it yourself
 
