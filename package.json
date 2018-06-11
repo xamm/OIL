@@ -5,7 +5,7 @@
     "version": "0.7.0",
     "repository": {
         "type": "git",
-        "url": "https://github.com/x-amm/OIL.git"
+        "url": "https://github.com/xamm/OIL.git"
     },
     "publisher": "xamm",
     "engines": {
