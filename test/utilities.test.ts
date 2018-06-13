@@ -56,8 +56,7 @@ suite("Utilities Test", () => {
 
     const expectedFilePath = ["/Users/Test"];
     const actualFilePath = Utilities.removeLastElement(
-      Utilities.createFilePath(filePathArray),
-      filePathArray
+      Utilities.createFilePath(filePathArray)
     );
     actualFilePath.then(path => {
       assert.equal(path, expectedFilePath);
@@ -72,9 +71,47 @@ suite("Utilities Test", () => {
 
     const expectedFilePath = ["/Users/Test"];
     const actualFilePath = Utilities.removeLastElement(
-      Utilities.createFilePath(filePathArray),
-      filePathArray
+      Utilities.createFilePath(filePathArray)
     );
+    actualFilePath.then(path => {
+      assert.equal(path, expectedFilePath);
+    });
+  });
+
+  test("createPathWithoutFilename directory in path", () => {
+    //sets isDirectory to true
+    Filesystem.setInstance(new Filesys(true));
+
+    const uri = "/Users/Test/test";
+
+    const expectedFilePath = "/Users/Test/test";
+    const actualFilePath = Utilities.createPathWithoutFilename(uri);
+    actualFilePath.then(path => {
+      assert.equal(path, expectedFilePath);
+    });
+  });
+
+  test("createPathWithoutFilename file in path", () => {
+    //sets isDirectory to false
+    Filesystem.setInstance(new Filesys(false));
+
+    const uri = "/Users/Test/test";
+
+    const expectedFilePath = "/Users/Test";
+    const actualFilePath = Utilities.createPathWithoutFilename(uri);
+    actualFilePath.then(path => {
+      assert.equal(path, expectedFilePath);
+    });
+  });
+
+  test("createPathWithoutFilename file with dot in path", () => {
+    //sets isDirectory to false
+    Filesystem.setInstance(new Filesys(false));
+
+    const uri = "/Users/Test/test.ts";
+
+    const expectedFilePath = "/Users/Test";
+    const actualFilePath = Utilities.createPathWithoutFilename(uri);
     actualFilePath.then(path => {
       assert.equal(path, expectedFilePath);
     });

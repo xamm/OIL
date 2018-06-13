@@ -14,14 +14,14 @@ export class FileExplorerHandler {
     }
   }
 
-  private static openLinux(uri: string): void {
-    const argument = Utilities.createPathWithoutFilename(uri);
+  private static async openLinux(uri: string): Promise<void> {
+    const argument: string = await Utilities.createPathWithoutFilename(uri);
     const command = "xdg-open  " + argument + "/";
     child_process.exec(command);
   }
 
-  private static openMac(uri: string): void {
-    const argument = Utilities.createPathWithoutFilename(uri);
+  private static async openMac(uri: string): Promise<void> {
+    const argument: string = await Utilities.createPathWithoutFilename(uri);
     const command = "open " + argument + "/";
     child_process.exec(command);
   }

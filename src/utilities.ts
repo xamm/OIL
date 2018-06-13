@@ -5,7 +5,7 @@ export class Utilities {
     const parts = Utilities.splitKeepDelimeter(uri, "/");
     const totalPath = Utilities.createFilePath(parts);
 
-    return await this.removeLastElement(totalPath, parts);
+    return await this.removeLastElement(totalPath);
   }
 
   public static splitKeepDelimeter(text: string, delimeter: string) {
@@ -21,13 +21,10 @@ export class Utilities {
     return parts.reduce((prev, curr) => prev.concat(curr));
   }
 
-  public static async removeLastElement(
-    path: string,
-    parts: string[]
-  ): Promise<string> {
+  public static async removeLastElement(path: string): Promise<string> {
     const instance = await Filesystem.Instance();
     return instance.lstatSync(path).isDirectory()
       ? path
-      : this.createFilePath(parts.slice(0, parts.length - 2));
+      : path.slice(0, path.lastIndexOf("/"));
   }
 }

@@ -7,9 +7,7 @@ export class UserInteraction {
   public static async manageUserInteraction(filePath: string): Promise<void> {
     if (ConfigurationHandler.shouldCopyToClipboard()) {
       if (ConfigurationHandler.shouldCopyWithoutFilename()) {
-        const pathWithoutFileName: string = await Utilities.createPathWithoutFilename(
-          filePath
-        );
+        const pathWithoutFileName: string = await Utilities.createPathWithoutFilename(filePath);
         Clipboard.copyPathToClipboard(pathWithoutFileName);
       } else {
         Clipboard.copyPathToClipboard(filePath);
