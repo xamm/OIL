@@ -2,6 +2,10 @@
 # yarn lockfile v1
 
 
+"@types/copy-paste@^1.1.30":
+  version "1.1.30"
+  resolved "https://registry.yarnpkg.com/@types/copy-paste/-/copy-paste-1.1.30.tgz#a7d454c9e1e4542328f7f1eecf5333be8cfb50ed"
+
 "@types/mocha@^2.2.41":
   version "2.2.48"
   resolved "https://registry.yarnpkg.com/@types/mocha/-/mocha-2.2.48.tgz#3523b126a0b049482e1c3c11877460f76622ffab"
@@ -1450,8 +1454,8 @@ tweetnacl@^0.14.3, tweetnacl@~0.14.0:
   resolved "https://registry.yarnpkg.com/tweetnacl/-/tweetnacl-0.14.5.tgz#5ae68177f192d4456269d108afa93ff8743f4f64"
 
 typescript@^2.5.2:
-  version "2.9.1"
-  resolved "https://registry.yarnpkg.com/typescript/-/typescript-2.9.1.tgz#fdb19d2c67a15d11995fd15640e373e09ab09961"
+  version "2.9.2"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-2.9.2.tgz#1cbf61d05d6b96269244eb6a3bce4bd914e0f00c"
 
 unique-stream@^2.0.2:
   version "2.2.1"

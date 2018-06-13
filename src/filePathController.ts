@@ -1,27 +1,26 @@
-import { FilePath } from './filePath';
-import { Disposable, window } from 'vscode';
+import { FilePath } from "./filePath";
+import { Disposable, window } from "vscode";
 export class FilePathController {
+  private filePath: FilePath;
+  private disposable: Disposable;
 
-	private filePath: FilePath;
-	private disposable: Disposable;
+  constructor(filePath: FilePath) {
+    this.filePath = filePath;
+    this.filePath.updateFilePath();
 
-	constructor(filePath: FilePath) {
-		this.filePath = filePath;
-		this.filePath.updateFilePath();
+    const subscriptions: Disposable[] = [];
+    window.onDidChangeActiveTextEditor(this.onEvent, this, subscriptions);
 
-		const subscriptions: Disposable[] = [];
-		window.onDidChangeActiveTextEditor(this.onEvent, this, subscriptions);
+    this.filePath.updateFilePath();
 
-		this.filePath.updateFilePath();
+    this.disposable = Disposable.from(...subscriptions);
+  }
 
-		this.disposable = Disposable.from(...subscriptions);
-	}
+  public dispose() {
+    this.disposable.dispose();
+  }
 
-	public dispose() {
-		this.disposable.dispose();
-	}
-
-	private onEvent() {
-		this.filePath.updateFilePath();
-	}
+  private onEvent() {
+    this.filePath.updateFilePath();
+  }
 }

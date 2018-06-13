@@ -1,45 +1,52 @@
-import { StatusBarItem, window, StatusBarAlignment, TextDocument } from 'vscode';
+import {
+  StatusBarItem,
+  window,
+  StatusBarAlignment,
+  TextDocument
+} from "vscode";
 
 export class FilePath {
+  private statusBarItem: StatusBarItem | null = null;
+  private path: string = "";
 
-	private statusBarItem: StatusBarItem | null = null;
-	public path: string = '';
+  public updateFilePath() {
+    const editor = window.activeTextEditor;
+    if (!editor) {
+      this.getStatusBarItemInstance().hide();
+      return;
+    }
 
-	public updateFilePath() {
+    const doc = editor.document;
+    this.path = this.getFilePath(doc);
 
-		const editor = window.activeTextEditor;
-		if (!editor) {
-			this.getStatusBarItemInstance().hide();
-			return;
-		}
+    this.fillStatusBarItem(this.path);
+    this.getStatusBarItemInstance().show();
+  }
 
-		const doc = editor.document;
-		this.path = this.getFilePath(doc);
+  private fillStatusBarItem(filePath: string): void {
+    this.getStatusBarItemInstance().text = filePath
+      ? `$(link-external) ` + filePath
+      : "";
+    this.getStatusBarItemInstance().command = "extension.openFolder";
+  }
 
-		this.fillStatusBarItem(this.path);
-		this.getStatusBarItemInstance().show();
+  public getPath(): string {
+    return this.path;
+  }
 
-	}
+  public getFilePath(doc: TextDocument): string {
+    const fullFileName = doc.fileName;
+    return fullFileName;
+  }
 
-	private fillStatusBarItem(filePath: string): void {
-		this.getStatusBarItemInstance().text = filePath ? `$(link-external) ` + filePath : '';
-		this.getStatusBarItemInstance().command = 'extension.openFolder';
-	}
+  public dispose() {
+    this.getStatusBarItemInstance().dispose();
+  }
 
-	public getFilePath(doc: TextDocument): string {
-
-		const fullFileName = doc.fileName;
-		return fullFileName;
-	}
-
-	public dispose() {
-		this.getStatusBarItemInstance().dispose();
-	}
-
-	private getStatusBarItemInstance(): StatusBarItem {
-		if (!this.statusBarItem) {
-			this.statusBarItem = window.createStatusBarItem(StatusBarAlignment.Left);
-		}
-		return this.statusBarItem;
-	}
+  private getStatusBarItemInstance(): StatusBarItem {
+    if (!this.statusBarItem) {
+      this.statusBarItem = window.createStatusBarItem(StatusBarAlignment.Left);
+    }
+    return this.statusBarItem;
+  }
 }
