@@ -1,4 +1,4 @@
-import { Filesystem } from "./singletons/fsSingleton";
+import { Injector } from "./singletons/injector";
 
 export class Utilities {
   public static async createPathWithoutFilename(uri: string): Promise<string> {
@@ -22,8 +22,8 @@ export class Utilities {
   }
 
   public static async removeLastElement(path: string): Promise<string> {
-    const instance = await Filesystem.Instance();
-    return instance.lstatSync(path).isDirectory()
+    const fileSystem: IFilesystem = await Injector.Instance("fs");
+    return fileSystem.lstatSync(path).isDirectory()
       ? path
       : path.slice(0, path.lastIndexOf("/"));
   }

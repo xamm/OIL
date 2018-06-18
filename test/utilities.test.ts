@@ -1,7 +1,7 @@
 import * as assert from "assert";
-import { Filesystem } from "../src/singletons/fsSingleton";
+import { Injector } from "../src/singletons/injector";
 import { Utilities } from "../src/utilities";
-export class Filesys {
+export class Filesys implements IFilesystem {
   constructor(private returnValue: boolean) {}
   public lstatSync(): any {
     return { isDirectory: () => this.returnValue };
@@ -50,7 +50,7 @@ suite("Utilities Test", () => {
 
   test("removeLastElement with filename in path", () => {
     //sets isDirectory to false
-    Filesystem.setInstance(new Filesys(false));
+    Injector.setInstance("fs", new Filesys(false));
 
     const filePathArray = ["/Users", "/Test", "/test"];
 
@@ -65,7 +65,7 @@ suite("Utilities Test", () => {
 
   test("removeLastElement without filename in path", () => {
     //sets isDirectory to false
-    Filesystem.setInstance(new Filesys(true));
+    Injector.setInstance("fs", new Filesys(true));
 
     const filePathArray = ["/Users", "/Test", "/test"];
 
@@ -80,7 +80,7 @@ suite("Utilities Test", () => {
 
   test("createPathWithoutFilename directory in path", () => {
     //sets isDirectory to true
-    Filesystem.setInstance(new Filesys(true));
+    Injector.setInstance("fs", new Filesys(true));
 
     const uri = "/Users/Test/test";
 
@@ -93,7 +93,7 @@ suite("Utilities Test", () => {
 
   test("createPathWithoutFilename file in path", () => {
     //sets isDirectory to false
-    Filesystem.setInstance(new Filesys(false));
+    Injector.setInstance("fs", new Filesys(false));
 
     const uri = "/Users/Test/test";
 
@@ -106,7 +106,7 @@ suite("Utilities Test", () => {
 
   test("createPathWithoutFilename file with dot in path", () => {
     //sets isDirectory to false
-    Filesystem.setInstance(new Filesys(false));
+    Injector.setInstance("fs", new Filesys(false));
 
     const uri = "/Users/Test/test.ts";
 
