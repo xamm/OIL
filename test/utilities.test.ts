@@ -62,12 +62,12 @@ suite("Utilities Test", () => {
     );
     actualFilePath.then(path => {
       assert.equal(path, expectedFilePath);
-    });
+	});
+	clear();
   });
 
   test("removeLastElement without filename in path", () => {
     //sets isDirectory to false
-    Injector.clear("fs");
     Injector.setInstance("fs", new Filesys(true));
     const filePathArray = ["/Users", "/Test", "/test"];
 
@@ -77,12 +77,12 @@ suite("Utilities Test", () => {
     );
     actualFilePath.then(path => {
       assert.equal(path, expectedFilePath);
-    });
+	});
+	clear();
   });
 
   test("createPathWithoutFilename directory in path", () => {
     //sets isDirectory to true
-    Injector.clear("fs");
     Injector.setInstance("fs", new Filesys(true));
 
     const uri = "/Users/Test/test";
@@ -91,12 +91,12 @@ suite("Utilities Test", () => {
     const actualFilePath = Utilities.createPathWithoutFilename(uri);
     actualFilePath.then(path => {
       assert.equal(path, expectedFilePath);
-    });
+	});
+	clear();
   });
 
   test("createPathWithoutFilename file in path", () => {
     //sets isDirectory to false
-    Injector.clear("fs");
     Injector.setInstance("fs", new Filesys(false));
 
     const uri = "/Users/Test/test";
@@ -105,12 +105,12 @@ suite("Utilities Test", () => {
     const actualFilePath = Utilities.createPathWithoutFilename(uri);
     actualFilePath.then(path => {
       assert.equal(path, expectedFilePath);
-    });
+	});
+	clear();
   });
 
   test("createPathWithoutFilename file with dot in path", () => {
 	//sets isDirectory to false
-	Injector.clear("fs");
     Injector.setInstance("fs", new Filesys(false));
 
     const uri = "/Users/Test/test.ts";
@@ -119,6 +119,11 @@ suite("Utilities Test", () => {
     const actualFilePath = Utilities.createPathWithoutFilename(uri);
     actualFilePath.then(path => {
       assert.equal(path, expectedFilePath);
-    });
+	});
+	clear();
   });
+
+  function clear() {
+	Injector.clear("fs");
+  }
 });
