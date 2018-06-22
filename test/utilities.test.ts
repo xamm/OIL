@@ -6,7 +6,9 @@ export class Filesys implements IFilesystem {
     return { isDirectory: () => this.returnValue };
   }
 }
+
 import { Injector } from "ugly-injector";
+
 suite("Utilities Test", () => {
   test("SplitKeepDelimeterTests path with delimeter in front", () => {
     const filePathWitFileName = "/Users/Test/test.ts";
@@ -65,8 +67,8 @@ suite("Utilities Test", () => {
 
   test("removeLastElement without filename in path", () => {
     //sets isDirectory to false
+    Injector.clear("fs");
     Injector.setInstance("fs", new Filesys(true));
-
     const filePathArray = ["/Users", "/Test", "/test"];
 
     const expectedFilePath = ["/Users/Test"];
@@ -80,6 +82,7 @@ suite("Utilities Test", () => {
 
   test("createPathWithoutFilename directory in path", () => {
     //sets isDirectory to true
+    Injector.clear("fs");
     Injector.setInstance("fs", new Filesys(true));
 
     const uri = "/Users/Test/test";
@@ -93,6 +96,7 @@ suite("Utilities Test", () => {
 
   test("createPathWithoutFilename file in path", () => {
     //sets isDirectory to false
+    Injector.clear("fs");
     Injector.setInstance("fs", new Filesys(false));
 
     const uri = "/Users/Test/test";
@@ -105,7 +109,8 @@ suite("Utilities Test", () => {
   });
 
   test("createPathWithoutFilename file with dot in path", () => {
-    //sets isDirectory to false
+	//sets isDirectory to false
+	Injector.clear("fs");
     Injector.setInstance("fs", new Filesys(false));
 
     const uri = "/Users/Test/test.ts";

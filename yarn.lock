@@ -11,8 +11,8 @@
   resolved "https://registry.yarnpkg.com/@types/mocha/-/mocha-2.2.48.tgz#3523b126a0b049482e1c3c11877460f76622ffab"
 
 "@types/node@^8.0.28":
-  version "8.10.19"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-8.10.19.tgz#66b5b6325c048cbf4512b7a88b0e79c2ee99d3d2"
+  version "8.10.20"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-8.10.20.tgz#fe674ea52e13950ab10954433a7824438aabbcac"
 
 ajv@^5.1.0:
   version "5.5.2"
@@ -1461,9 +1461,9 @@ typescript@^2.9.2:
   version "2.9.2"
   resolved "https://registry.yarnpkg.com/typescript/-/typescript-2.9.2.tgz#1cbf61d05d6b96269244eb6a3bce4bd914e0f00c"
 
-ugly-injector@^0.0.1:
-  version "0.0.1"
-  resolved "https://registry.yarnpkg.com/ugly-injector/-/ugly-injector-0.0.1.tgz#df98026349a989a94f4558d7104886ea5166c491"
+ugly-injector@^0.0.2:
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/ugly-injector/-/ugly-injector-0.0.2.tgz#8cccd9394bb10d882089115c5719d3483bb0d898"
   dependencies:
     i-list-dictionary "0.0.1"
 
