@@ -693,6 +693,10 @@ http-signature@~1.2.0:
     jsprim "^1.2.2"
     sshpk "^1.7.0"
 
+i-list-dictionary@0.0.1:
+  version "0.0.1"
+  resolved "https://registry.yarnpkg.com/i-list-dictionary/-/i-list-dictionary-0.0.1.tgz#36ec6cde199a9e12da42062810e83999dc5a2b7d"
+
 iconv-lite@^0.4.8:
   version "0.4.19"
   resolved "https://registry.yarnpkg.com/iconv-lite/-/iconv-lite-0.4.19.tgz#f7468f60135f5e5dad3399c0a81be9a1603a082b"
@@ -1453,9 +1457,15 @@ tweetnacl@^0.14.3, tweetnacl@~0.14.0:
   version "0.14.5"
   resolved "https://registry.yarnpkg.com/tweetnacl/-/tweetnacl-0.14.5.tgz#5ae68177f192d4456269d108afa93ff8743f4f64"
 
-typescript@^2.5.2:
+typescript@^2.9.2:
   version "2.9.2"
   resolved "https://registry.yarnpkg.com/typescript/-/typescript-2.9.2.tgz#1cbf61d05d6b96269244eb6a3bce4bd914e0f00c"
+
+ugly-injector@^0.0.1:
+  version "0.0.1"
+  resolved "https://registry.yarnpkg.com/ugly-injector/-/ugly-injector-0.0.1.tgz#df98026349a989a94f4558d7104886ea5166c491"
+  dependencies:
+    i-list-dictionary "0.0.1"
 
 unique-stream@^2.0.2:
   version "2.2.1"

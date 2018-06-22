@@ -1,4 +1,4 @@
-import { Injector } from "./singletons/injector";
+import { Injector } from "ugly-injector";
 
 export class Utilities {
   public static async createPathWithoutFilename(uri: string): Promise<string> {

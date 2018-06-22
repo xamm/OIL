@@ -1,5 +1,4 @@
 import * as assert from "assert";
-import { Injector } from "../src/singletons/injector";
 import { Utilities } from "../src/utilities";
 export class Filesys implements IFilesystem {
   constructor(private returnValue: boolean) {}
@@ -7,6 +6,7 @@ export class Filesys implements IFilesystem {
     return { isDirectory: () => this.returnValue };
   }
 }
+import { Injector } from "inject";
 suite("Utilities Test", () => {
   test("SplitKeepDelimeterTests path with delimeter in front", () => {
     const filePathWitFileName = "/Users/Test/test.ts";
