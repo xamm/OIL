@@ -6,7 +6,7 @@ export class Filesys implements IFilesystem {
     return { isDirectory: () => this.returnValue };
   }
 }
-import { Injector } from "inject";
+import { Injector } from "ugly-injector";
 suite("Utilities Test", () => {
   test("SplitKeepDelimeterTests path with delimeter in front", () => {
     const filePathWitFileName = "/Users/Test/test.ts";
