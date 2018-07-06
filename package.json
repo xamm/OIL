@@ -1,5 +1,6 @@
 {
     "name": "filepath",
+    "license": "MIT",
     "displayName": "ShowFile",
     "description": "Shows the filepath of the current file in the editor and enables the user to click on the path to open the explorer in this location.",
     "version": "0.7.0",
