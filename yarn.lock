@@ -1461,7 +1461,7 @@ typescript@^2.9.2:
   version "2.9.2"
   resolved "https://registry.yarnpkg.com/typescript/-/typescript-2.9.2.tgz#1cbf61d05d6b96269244eb6a3bce4bd914e0f00c"
 
-ugly-injector@^0.0.2:
+ugly-injector@0.0.2:
   version "0.0.2"
   resolved "https://registry.yarnpkg.com/ugly-injector/-/ugly-injector-0.0.2.tgz#8cccd9394bb10d882089115c5719d3483bb0d898"
   dependencies:
