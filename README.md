@@ -19,7 +19,7 @@ This extension is used to open the current place of the opened file in the file 
 
 ### Build it
 
-Clone the repository: ```git clone https://github.com/x-amm/OIL.git```
+Clone the repository: ```git clone https://github.com/xamm/OIL.git```
 Open the repository in a terminal window.
 
 Run ```yarn``` or ```npm install``` from the project folder in a terminal.
@@ -33,7 +33,7 @@ You can now run this sourcecode with e.g. VisualStudio Code.
     "showFileExtension.copyPathToClipBoard": false,
     "showFileExtension.copyWithoutFilename": false
 
-###  CopyPathToClipBoard
+### CopyPathToClipBoard
 
 If true no file explorer will be opened, but the path to the file will be copied to clipboard.
 
