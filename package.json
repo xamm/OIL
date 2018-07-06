@@ -29,7 +29,7 @@
         "@types/copy-paste": "^1.1.30",
         "@types/mocha": "^2.2.41",
         "@types/node": "^8.0.28",
-        "mocha": "^3.5.3",
+        "mocha": "^5.2.0",
         "tslint": "^5.4.3",
         "tslint-microsoft-contrib": "^5.0.1",
         "typescript": "^2.9.2"
