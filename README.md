@@ -5,6 +5,7 @@ This extension is used to open the current place of the opened file in the file 
 ## Build Status and License
 
 [![Build Status](https://travis-ci.org/xamm/OIL.svg?branch=master)](https://travis-ci.org/xamm/OIL)
+[![Build status](https://ci.appveyor.com/api/projects/status/qqis82ktf44tpx6e/branch/master?svg=true)](https://ci.appveyor.com/project/xamm/oil/branch/master)
 [![Licence](https://img.shields.io/github/license/xamm/OIL.svg)](https://github.com/xamm/OIL)
 
 ## Build it yourself
