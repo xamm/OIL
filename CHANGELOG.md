@@ -6,7 +6,7 @@ All notable changes to the "filepath" extension will be documented in this file.
 - Make network shares usable in Windows/macOS/Linux
 - Availability for Windows
 
-## [0.0.9] -
+## [0.0.9] - 2018-07-21
 
 ### Fixed
 
