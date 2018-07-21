@@ -2,7 +2,7 @@ import * as child_process from "child_process";
 import { Utilities } from "./utilities";
 import { IProcess } from "./IProcess";
 import { Injector } from "ugly-injector";
-import { UnsupportedPlatform } from "./errors/UnsupportedPlatform";
+import { UnsupportedPlatform } from "./errors/unsupportedPlatform";
 export class FileExplorerHandler {
   public static async openFolder(uri: string): Promise<void> {
     const process: IProcess = await Injector.Instance("process");
