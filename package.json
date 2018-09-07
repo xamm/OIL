@@ -3,7 +3,7 @@
     "license": "MIT",
     "displayName": "ShowFile",
     "description": "Shows the filepath of the current file in the editor and enables the user to click on the path to open the explorer in this location.",
-    "version": "0.8.0",
+    "version": "0.8.1",
     "repository": {
         "type": "git",
         "url": "https://github.com/xamm/OIL.git"
