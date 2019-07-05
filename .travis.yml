@@ -13,13 +13,13 @@ before_install:
     fi
 
 install:
-  - yarn
-  - yarn run vscode:prepublish
+  - npm install
+  - npm run vscode:prepublish
 
 script:
-  - yarn test --silent
+  - npm test --silent
 
 cache:
-  yarn: true
+  yarn: false
   directories:
     - node_modules

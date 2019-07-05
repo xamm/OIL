@@ -7,11 +7,11 @@ install:
   # Get the latest stable version of Node.js or io.js
   - ps: Install-Product node $env:nodejs_version
   # install modules
-  - yarn
-  - yarn run vscode:prepublish
+  - npm install
+  - npm run vscode:prepublish
 
 test_script:
-  - yarn test --silent
+  - npm test --silent
 
 # Don't actually build.
 build: off
