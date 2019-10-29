@@ -3,7 +3,7 @@
 	"license": "MIT",
 	"displayName": "ShowFile",
 	"description": "Shows the filepath of the current file in the editor and enables the user to click on the path to open the explorer in this location.",
-	"version": "0.8.1",
+	"version": "0.10.0",
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/xamm/OIL.git"
@@ -30,7 +30,6 @@
 		"@types/mocha": "^5.2.7",
 		"@types/node": "^12.0.12",
 		"mocha": "^6.1.4",
-		"npm-check": "^5.9.0",
 		"tslint": "^5.4.3",
 		"tslint-microsoft-contrib": "^6.2.0",
 		"typescript": "^3.5.2",
